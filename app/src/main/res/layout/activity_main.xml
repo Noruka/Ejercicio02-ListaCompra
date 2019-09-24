@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC107"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llContenedorMercadonaMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnMercadonaAddMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:text="MERCADONA ADD" />
+
+        <LinearLayout
+            android:id="@+id/lltxtContenedorMercadonaMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContenedorConsumMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#FF9800"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnConsumAddMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9800"
+            android:text="CONSUM ADD" />
+
+        <LinearLayout
+            android:id="@+id/lltxtContenedorConsumMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContenedorDiaMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#F44336"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnDiaAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F44336"
+            android:text="DIA ADD" />
+
+        <LinearLayout
+            android:id="@+id/lltxtContenedorDiaMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
