@@ -1,8 +1,5 @@
 package com.example.ejercicio02_listacompra;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,8 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.lang.invoke.ConstantCallSite;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
                         textView.setTextSize(18);
                         textView.setTextColor(Color.BLACK);
 
+                        textView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                llMercadona.removeView(view);
+                                Toast.makeText(MainActivity.this, "Se ha eliminado el item", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                         llMercadona.addView(textView);
                         break;
                     case CONSUM:
@@ -84,12 +91,28 @@ public class MainActivity extends AppCompatActivity {
                         textView.setTextSize(18);
                         textView.setTextColor(Color.BLACK);
 
+                        textView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                llConsum.removeView(view);
+                                Toast.makeText(MainActivity.this, "Se ha eliminado el item", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                         llConsum.addView(textView);
                         break;
                     case DIA:
                         textView.setText(data.getExtras().getString("PRODUCTO") + " " + data.getExtras().getString("CANTIDAD"));
                         textView.setTextSize(18);
                         textView.setTextColor(Color.BLACK);
+
+                        textView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                llDia.removeView(view);
+                                Toast.makeText(MainActivity.this, "Se ha eliminado el item", Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                         llDia.addView(textView);
                         break;

@@ -1,13 +1,13 @@
 package com.example.ejercicio02_listacompra;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MercadonaAddActivity extends AppCompatActivity {
 
@@ -40,6 +40,10 @@ public class MercadonaAddActivity extends AppCompatActivity {
                 if (txtProducto.getText().toString().isEmpty() || txtCantidad.getText().toString().isEmpty()){
 
                     Toast.makeText(MercadonaAddActivity.this, "Faltan datos", Toast.LENGTH_SHORT).show();
+
+                } else if (Float.parseFloat(txtCantidad.getText().toString()) <= 0) {
+
+                    Toast.makeText(MercadonaAddActivity.this, "Cantidad no puede ser menos de 1", Toast.LENGTH_SHORT).show();
 
                 }else{
 
