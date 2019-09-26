@@ -1,17 +1,23 @@
 package com.example.ejercicio02_listacompra;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.lang.invoke.ConstantCallSite;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnMercadonAdd, btnConsumAdd, btnDiaAdd;
+
+    private LinearLayout llMercadona, llConsum, llDia;
 
     private final int MERCADONA = 1, CONSUM = 2, DIA = 3;
 
@@ -23,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         btnMercadonAdd = findViewById(R.id.btnMercadonaAddMain);
         btnConsumAdd = findViewById(R.id.btnConsumAddMain);
         btnDiaAdd = findViewById(R.id.btnDiaAdd);
+
+        llMercadona = findViewById(R.id.lltxtContenedorMercadonaMain);
+        llConsum = findViewById(R.id.lltxtContenedorConsumMain);
+        llDia = findViewById(R.id.lltxtContenedorDiaMain);
 
         btnMercadonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,4 +61,41 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        final TextView textView = new TextView(MainActivity.this);
+
+        if (resultCode == RESULT_OK) {
+            if (data != null) {
+                switch (requestCode) {
+
+                    case MERCADONA:
+                        textView.setText(data.getExtras().getString("PRODUCTO") + " " + data.getExtras().getString("CANTIDAD"));
+                        textView.setTextSize(18);
+                        textView.setTextColor(Color.BLACK);
+
+                        llMercadona.addView(textView);
+                        break;
+                    case CONSUM:
+                        textView.setText(data.getExtras().getString("PRODUCTO") + " " + data.getExtras().getString("CANTIDAD"));
+                        textView.setTextSize(18);
+                        textView.setTextColor(Color.BLACK);
+
+                        llConsum.addView(textView);
+                        break;
+                    case DIA:
+                        textView.setText(data.getExtras().getString("PRODUCTO") + " " + data.getExtras().getString("CANTIDAD"));
+                        textView.setTextSize(18);
+                        textView.setTextColor(Color.BLACK);
+
+                        llDia.addView(textView);
+                        break;
+                }
+            }
+        }
+    }
+
 }

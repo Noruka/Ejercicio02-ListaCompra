@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4CAF50"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MercadonaAddActivity">
@@ -14,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Producto"
         android:inputType="textPersonName" />
 
@@ -23,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Cantidad"
         android:inputType="number" />
 
@@ -30,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <Button
@@ -37,13 +41,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@android:string/cancel" />
+            android:gravity="center_horizontal"
+            android:text="@android:string/cancel"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnOkMercadonaAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@android:string/ok" />
+            android:gravity="center_horizontal"
+            android:text="@android:string/ok"
+            android:textSize="18sp" />
     </LinearLayout>
 </LinearLayout>
