@@ -36,16 +36,21 @@ public class MainActivity extends AppCompatActivity {
         btnMercadonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MercadonaAddActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("SUPERMERCADO", MERCADONA);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, MERCADONA);
-
             }
         });
 
         btnConsumAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ConsumAddActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("SUPERMERCADO", CONSUM);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, CONSUM);
 
             }
@@ -54,7 +59,10 @@ public class MainActivity extends AppCompatActivity {
         btnDiaAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, DiaAddActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("SUPERMERCADO", DIA);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, DIA);
             }
         });

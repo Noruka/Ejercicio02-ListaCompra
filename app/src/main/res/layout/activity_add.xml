@@ -10,18 +10,18 @@
     tools:context=".MercadonaAddActivity">
 
     <TextView
-        android:id="@+id/txtTituloMercadonaAdd"
+        android:id="@+id/txtTituloAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:background="#2E7D32"
+        android:background="#3949AB"
         android:gravity="center"
         android:padding="5dp"
-        android:text="MERCADONA"
+        android:text="TITULO"
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/edtProductoMercadonaAdd"
+        android:id="@+id/txtProductoAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -30,7 +30,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/edtCantidadMercadonaAdd"
+        android:id="@+id/txtCantidadAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -47,7 +47,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnCancelarMercadonaAdd"
+            android:id="@+id/btnCancelarAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +56,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btnOkMercadonaAdd"
+            android:id="@+id/btnOkAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

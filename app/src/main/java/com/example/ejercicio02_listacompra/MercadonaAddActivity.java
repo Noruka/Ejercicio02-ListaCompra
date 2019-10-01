@@ -19,11 +19,11 @@ public class MercadonaAddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mercadona_add);
 
-        txtProducto = findViewById(R.id.edtProductoMercadonaAdd);
-        txtCantidad = findViewById(R.id.edtCantidadMercadonaAdd);
+        txtProducto = findViewById(R.id.txtProductoAdd);
+        txtCantidad = findViewById(R.id.txtCantidadAdd);
 
-        btnOk = findViewById(R.id.btnOkMercadonaAdd);
-        btnCancelar = findViewById(R.id.btnCancelarMercadonaAdd);
+        btnOk = findViewById(R.id.btnOkAdd);
+        btnCancelar = findViewById(R.id.btnCancelarAdd);
 
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
