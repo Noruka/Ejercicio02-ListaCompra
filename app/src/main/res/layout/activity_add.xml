@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3949AB"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MercadonaAddActivity">
+
+    <TextView
+        android:id="@+id/txtTituloMercadonaAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#2E7D32"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="MERCADONA"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edtProductoMercadonaAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Producto"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtCantidadMercadonaAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Cantidad"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelarMercadonaAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@android:string/cancel"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnOkMercadonaAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@android:string/ok"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
